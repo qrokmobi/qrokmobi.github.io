@@ -1,0 +1,532 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@accent: #404040;
+@text: #949494;
+
+@RR: RubikRegular, sans-serif;
+@RB: RubikBold, sans-serif;
+@RM: RubikMedium, sans-serif;
+@RL: RubikLight, sams-serif;
+
+html {
+  height: 100%;
+}
+
+body {
+  //background: #231f20;
+  height: 100%;
+  color: #fff;
+  font-family: @RR;
+  position: relative;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+#fullPage {
+  z-index: 2;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 120px;
+  font-family: @RB;
+
+  @media @desktop {
+    font-size: 90px;
+  }
+
+  @media @tablet {
+    font-size: 70px;
+  }
+
+  @media @mobile {
+    font-size: 45px;
+  }
+}
+
+h3 {
+  font-size: 75px;
+  font-family: @RM;
+
+  @media @desktop, @tablet {
+    font-size: 60px;
+  }
+
+  @media @mobile {
+    font-size: 35px;
+  }
+}
+
+h5 {
+  font-size: 25px;
+  font-family: @RM;
+
+  @media @mobile {
+    font-size: 20px;
+  }
+}
+
+p {
+  font-size: 25px;
+  margin-bottom: 30px;
+  font-family: @RL;
+
+  @media @desktop, @tablet {
+    font-size: 20px;
+  }
+
+  @media @mobile {
+    font-size: 16px;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.note {
+  font-size: 14px;
+  color: @accent;
+
+  @media @mobile {
+    font-size: 12px;
+  }
+}
+
+.d-flex {
+  display: flex;
+  margin: 0 -5%;
+
+
+  @media @mobile {
+    flex-direction: column;
+  }
+
+  .item {
+    padding: 0 5%;
+    flex-basis: 50%;
+
+    .img-wrap {
+      @media @mobile {
+        padding-top: 50px;
+      }
+    }
+  }
+}
+
+.columns {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 10%;
+  -moz-column-gap: 10%;
+  column-gap: 10%;
+
+  @media @mobile {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+
+.section-top {
+  font-size: 25px;
+  text-transform: uppercase;
+  padding: 0 100px 25px 0;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 125px;
+
+  @media @desktop, @tablet {
+    margin-bottom: 50px;
+  }
+
+  @media @mobile {
+    font-size: 15px;
+    padding: 0 0 15px;
+    margin-bottom: 50px;
+    display: block;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 1000%;
+    height: 9px;
+    background: @accent;
+
+    @media @mobile {
+      height: 4px;
+      width: 100%;
+    }
+  }
+
+  span {
+    position: relative;
+    display: block;
+  }
+}
+
+section {
+
+  @media @mobile {
+    padding: 50px 0;
+  }
+
+  &.section-1 {
+
+    @media @mobile {
+      height: 100vh;
+    }
+
+    .text-wrap {
+      max-width: 70%;
+
+      @media @desktop {
+        max-width: 50%;
+      }
+
+      @media @tablet, @mobile {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &.section-2 {
+
+    @media @mobile {
+      height: 100vh;
+    }
+
+    h3 {
+      //margin-top: 5%;
+      max-width: 70%;
+
+      @media @desktop {
+        margin: 0;
+        max-width: 50%;
+      }
+
+      @media @tablet, @mobile {
+        max-width: 100%;
+      }
+    }
+
+    .section-container {
+      height: 100%;
+
+      .container {
+        height: 100%;
+      }
+
+      .section-top {
+        margin: 0;
+      }
+    }
+
+    .section-center-container {
+      height: ~'calc(100% - 54px)';
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &.section-bg {
+    position: relative;
+
+    .bg {
+      height: 35vh;
+      width: 35vh;
+      position: absolute;
+      right: 15%;
+      top: 50%;
+      transform: translateY(-50%);
+
+
+      @media @tablet, @mobile {
+        right: 0;
+        bottom: 20px;
+        top: auto;
+        transform: translateY(0);
+      }
+
+      path {
+        opacity: 0;
+        stroke-width: 1px;
+        stroke: @accent;
+        fill: none;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        //stroke-miterlimit: 10;
+      }
+    }
+  }
+
+  .section-container {
+    padding: 10% 0;
+
+    @media @desktop, @tablet {
+      padding: 50px 0;
+    }
+
+    @media @mobile {
+      padding: 0;
+    }
+
+    &.center {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      .container {
+        width: 100%;
+      }
+
+      h1 {
+        margin-bottom: 10%;
+      }
+    }
+  }
+}
+
+.text-wrap {
+  p {
+    a {
+      color: inherit;
+      font-size: inherit;
+      font-family: inherit;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.table-wrap {
+
+  @media @mobile {
+    margin-top: 50px;
+  }
+
+  table {
+    border-collapse: collapse;
+
+    tr {
+      td {
+        font-size: 25px;
+        padding: 5px 15px;
+        font-family: @RL;
+        border-bottom: 1px solid #414141;
+
+        @media @desktop, @tablet, @mobile {
+          font-size: 14px;
+        }
+
+        &:first-child {
+          color: #fff;
+          text-transform: uppercase;
+        }
+
+        &:last-child {
+          color: @text;
+        }
+      }
+    }
+  }
+}
+
+.img-wrap {
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+
+  #scheme {
+    .cls-1, .cls-3 {
+      fill: #868789;
+    }
+
+    .cls-2 {
+      fill: #fff;
+    }
+
+    .cls-3, .cls-4 {
+      fill-rule: evenodd
+    }
+
+    .cls-4 {
+      fill: #8aa033;
+    }
+
+    //path, polygon, rect {
+    //  fill: none;
+    //  //stroke: #f6f7f7 !important;
+    //  stroke: #868789;
+    //  stroke-width: 1px;
+    //  stroke-dasharray: 1000;
+    //  stroke-dashoffset: 1000;
+    //  stroke-miterlimit: 10;
+    //}
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 35px 0 100px;
+  z-index: 2;
+  background: #231f20;
+
+  @media @desktop, @tablet {
+    padding-bottom: 50px;
+  }
+
+  @media @mobile {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    padding: 25px 0;
+  }
+
+  .footer-box {
+    display: flex;
+    align-items: center;
+
+    @media @mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  h5 {
+    margin-right: 50px;
+
+    @media @mobile {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+/*animations*/
+
+//.is-animated-left, .is-animated {
+//  opacity: 0;
+//}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: .7s;
+  animation-duration: .7s;
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.dash {
+  -webkit-animation-name: dash;
+  animation-name: dash;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dash {
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 3000;
+  }
+}
+
+@mobile-xs: ~"only screen and (max-width: 480px)";
+@mobile: ~"only screen and (max-width: 767px)";
+@landscapeMobile: ~"only screen and (max-width: 767px) and (orientation: landscape)";
+@tablet: ~"only screen and (min-width: 768px) and (max-width: 1023px)";
+@portraitTab: ~"only screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) ";
+@desktop: ~"only screen and (min-width: 1024px) and (max-width: 1366px)";
+@portraitDesktop: ~"only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) ";
+@desktop-xl: ~"only screen and (min-width: 1367px) and (max-width: 1680px)";
+@desktop-xl-min: ~"only screen and (min-width: 1366px)";
