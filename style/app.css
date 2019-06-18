@@ -12,6 +12,11 @@ body {
   font-family: RubikRegular, sans-serif;
   position: relative;
 }
+@media only screen and (max-width: 767px) {
+  body {
+    background: #231f20;
+  }
+}
 canvas {
   position: absolute;
   top: 0;

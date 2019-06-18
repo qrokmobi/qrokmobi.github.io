@@ -171,12 +171,26 @@
 //     renderer.render(scene, camera);
 // }
 
-var camera, scene, renderer, stats, group;
-var mouseX = 0, mouseY = 0;
-var windowHalfX = window.innerWidth / 2;
-var windowHalfY = window.innerHeight / 2;
-init();
-animate();
+let camera, scene, renderer, stats, group;
+let mouseX = 0, mouseY = 0;
+let windowHalfX = window.innerWidth / 2;
+let windowHalfY = window.innerHeight / 2;
+
+$(document).ready(function () {
+
+    if ($(window).outerWidth() > 767) {
+        init();
+        animate();
+    }
+
+    $(window).resize(function () {
+        if ($(window).outerWidth() > 767) {
+            init();
+            animate();
+        }
+    });
+});
+
 function init() {
     let container = document.getElementById('area');
 
@@ -237,13 +251,11 @@ function onDocumentMouseMove( event ) {
     mouseX = ( event.clientX - windowHalfX ) * 2;
     mouseY = ( event.clientY - windowHalfY ) * 2;
 }
-//
 function animate() {
     requestAnimationFrame( animate );
     render();
     // stats.update();
 }
-
 function render() {
     // let time = Date.now() * 0.001;
     // let rx = Math.sin( time * 0.7 ) * 0.5,
