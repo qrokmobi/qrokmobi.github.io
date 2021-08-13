@@ -1,0 +1,236 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(277.55deg, #0069D5 23.74%, #0F3A81 81.66%);
+  font-family: 'PT Sans', sans-serif;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+button, button:focus {
+  outline: none;
+}
+.col {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.container {
+  padding: 0px !important;
+}
+.main {
+  padding-bottom: 92px;
+}
+.header {
+  height: 82px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 35px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+
+  color: #FFFFFF;
+  margin-bottom: 100px;
+}
+h2 span {
+  color: #95C818;
+}
+h5 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #E6EDF4;
+  margin-bottom: 45px;
+}
+.email {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #E6EDF4;
+  text-decoration: none;
+  border-bottom: 4px solid #95C818;
+}
+.email:hover {
+  color: #E6EDF4;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+ul, li {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #E6EDF4;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #95C818;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+ul span {
+  margin-left: -15px;
+}
+h6 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #FFFFFF;
+  margin-bottom: 15px;
+  margin-top: 34px;
+}
+.link {
+  width: 210px;
+  height: 42px;
+  background: #95C818;
+  border-radius: 5px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0E3C85;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.link:hover {
+  color: #0E3C85;
+  text-decoration: none;
+}
+.telegram {
+  margin-right: 12px;
+}
+.right-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.countdown-timer-header {
+  background: linear-gradient(112.83deg, rgba(255, 255, 255, 0.47) 0%, rgba(255, 255, 255, 0) 110.84%);
+  backdrop-filter: blur(42px);
+  border-radius: 10px 10px 0px 0px;
+  width: 376px;
+  height: 50px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #FFFFFF;
+}
+.countdown-timer-body {
+  background: #FFFFFF;
+  border-radius: 0px 0px 10px 10px;
+  width: 376px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  padding-top: 14px;
+}
+.text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+
+  color: #146BA6;
+}
+.two-dots {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 58px;
+  text-align: center;
+
+  color: #95C818;
+
+  opacity: 0.5;
+  margin: 0 15px;
+}
+.number {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 58px;
+  text-align: center;
+
+  color: #0E3C85;
+}
+@media (min-width: 992px) and (max-width: 1399px) {
+  .main {
+    overflow: hidden;
+  }
+}
+@media (min-width: 1200px) {
+  .credit-card {
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 100px) and (max-width: 991px) {
+  h2, h5 {
+    text-align: center;
+  }
+}
+@media (min-width: 576px) and (max-width: 1280px) {
+  .main {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 100px) and (max-width: 576px) {
+  h2, h5, ul {
+    margin-bottom: 35px;
+  }
+  .main {
+    padding: 0 10px;
+  }
+  .countdown-timer-header, .countdown-timer-body {
+    width: 300px;
+  }
+  .main {
+    padding-bottom: 169px;
+    position: relative;
+    margin-bottom: 0px;
+  }
+  .credit-card-mobile {
+    position: absolute;
+    right: 0;
+    bottom: -169px;
+  }
+}

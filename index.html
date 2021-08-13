@@ -1,48 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142282727-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-142282727-1');
-</script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IEX</title>
-    <link rel="stylesheet" href="style/fonts.css">
-    <link rel="stylesheet" href="style/app.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iExchange - надежный криптовалютный кошелек, выгодный обменник</title>
+  <meta name="title" content="iExchange - надежный криптовалютный кошелек, выгодный обменник" />
+  <meta name="description" content="Криптоплатформа iExchange - Покупка, продажа, обмен криптовалюты. Кошелек для приема, отправки, хранения криптовалют, и фиата." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<canvas id="area"></canvas>
-
-<div id="fullPage" class="app">
-    <section class="section section-1 section-bg">
-        <div class="section-container center">
-            <div class="container">
-                <div class="text-wrap">
-                    <h1 class="is-animated-opacity">IEX</h1>
-                    <p class="is-animated">Мы скоро вернёмся!<br />
-Присоединяйтесь и следите за нашими новостями в Telegram<br />
-<a href="https://t.me/joinchat/VkjkmUCgQZ_Eipcr">IEX</a> <br/></p>
-                </div>
-              </div>
+  <header class="header">
+    <img src="img/logo.png" alt="Logo">
+  </header>
+  <section class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 left-col">
+          <h2>
+            Уважаемые пользователи! <br>
+            В связи с реорганизацией компании <br>
+            и переходом другую юрисдикцию, <br>
+            сервис «iExchange» <span>временно недоступен</span>. 
+          </h2>
+          <h5>
+            Все аккаунты, которые были в системе закрыты. Мы полностью выполнили свои обязательства перед клиентами, но, если у вас остались вопросы вы можете направлять их на <a href="mailto:info@iex.net" class="email">info@iex.net</a><br><br>
+            Совсем скоро мы возобновим свою работу. Кроме смены юрисдикции у нас планируется ребрендинг и обновление части команды. Все это в комплексе, даст нам возможность значительно поднять уровень нашего сервиса и получить дополнительные конкурентные преимущества.
+          </h5>
+          <ul>
+            <span>После перезапуска мы предоставим следующие виды услуг:</span>
+            <li>Обмен криптовалют;</li>
+            <li>Покупка/продажа криптовалюты за фиатные средства; </li>
+            <li>Маржинальная торговля криптовалютой и криптовалютными деривативами;</li>
+            <li>Инвестиционные инструменты, которые позволят получать пассивный доход и т.д.</li>
+          </ul>
         </div>
-    </section>
-    
+        <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 right-col">
+          <div class="countdown-timer">
+            <div class="countdown-timer-header">
+              До старта осталось
+            </div>
+            <div class="countdown-timer-body" id="countdown-timer-body">
+              <span>
+                <div class="number">120</div>
+                <div class="text">дней</div>
+              </span>
+              <span class="two-dots">
+                :
+              </span>
+              <span>
+                <div class="number">00</div>
+                <div class="text">часов</div>
+              </span>
+              <span class="two-dots">
+                :
+              </span>
+              <span>
+                <div class="number">00</div>
+                <div class="text">минут</div>
+              </span>
+            </div>
+          </div>
+          <h6>
+            Подпишитесь на наш телеграмм канал, <br>
+            чтобы ничего не пропустить
+          </h6>
+          <a href="https://t.me/joinchat/VkjkmUCgQZ_Eipcr" target="_blank" class="link">
+            <img src="img/telegram.svg" alt="Telegram" class="telegram"> Открыть в Telegram
+          </a>
+          <div class="d-none d-sm-block credit-card-block">
+            <img src="img/credit-card.png" alt="Credit card" class="credit-card">
+          </div>
+          <img  src="img/credit-card-mobile.png" alt="Credit card mobile" class="d-block d-sm-none credit-card-mobile">
+        </div>
+      </div>
     </div>
+  </section>
+  <script>
+    let countDownDate = new Date("August 13, 2021 00:00:00");
+    countDownDate = new Date(countDownDate.setDate(countDownDate.getDate() + 120)).getTime();
+    
+    let x = setInterval(function() {
+    
+      const now = new Date().getTime();
+    
+      const distance = countDownDate - now;
+    
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
+      const addedZeroBefore = (number) => {
+        return number <= 9 ? `0${number}`: number
+      }
+    
+      document.getElementById("countdown-timer-body").innerHTML = `
+        <span>
+          <div class="number">${addedZeroBefore(days)}</div>
+          <div class="text">дней</div>
+        </span>
+        <span class="two-dots">
+          :
+        </span>
+        <span>
+          <div class="number">${addedZeroBefore(hours)}</div>
+          <div class="text">часов</div>
+        </span>
+        <span class="two-dots">
+          :
+        </span>
+        <span>
+          <div class="number">${addedZeroBefore(minutes)}</div>
+          <div class="text">минут</div>
+        </span>
+      `;
+    
+      if (distance < 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+    </script>
 </body>
-
-<script src="libs/jquery/dist/jquery.min.js"></script>
-<script src="libs/FullPage/jquery.fullpage.min.js"></script>
-<script src="libs/three.min.js"></script>
-<script src="libs/dat.gui.min.js"></script>
-<script src="libs/stats.min.js"></script>
-<script src="js/treejs.js"></script>
-<script src="js/app.js"></script>
 </html>
